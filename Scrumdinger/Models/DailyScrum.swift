@@ -1,9 +1,6 @@
 //
 //  DailyScrum.swift
 //  Scrumdinger
-//
-//  Created by Kristina Belova on 22.03.2023.
-//
 
 import Foundation
 
@@ -14,6 +11,7 @@ struct DailyScrum : Identifiable {
     var attendees: [Attendee]
     var lengthInMinutes: Int
     var theme: Theme
+    var history: [History] = []
     
     init(id: UUID = UUID(), title: String, attendees: [String], lengthInMinutes: Int, theme: Theme) {
         self.id = id
@@ -41,12 +39,26 @@ extension DailyScrum {
         var attendees: [Attendee] = []
         var lengthInMinutes: Double = 5
         var theme: Theme = .seafoam
-        
-        var data: Data {
-            Data(title: title, attendees: attendees, lengthInMinutes: Double(lengthInMinutes), theme: theme)
-        }
     }
     
+    var data: Data {
+        Data(title: title, attendees: attendees, lengthInMinutes: Double(lengthInMinutes), theme: theme)
+    }
+    
+    mutating func update(from data: Data) {
+        title = data.title
+        attendees = data.attendees
+        theme = data.theme
+        lengthInMinutes = Int(data.lengthInMinutes)
+    }
+    
+    init(data: Data) {
+        id = UUID()
+        title = data.title
+        attendees = data.attendees
+        lengthInMinutes = Int(data.lengthInMinutes)
+        theme = data.theme
+    }
 }
 
 extension DailyScrum {
