@@ -2,8 +2,6 @@
 //  MeetingView.swift
 //  Scrumdinger
 //
-//  Created by Kristina Belova on 20.03.2023.
-//
 
 import SwiftUI
 import AVFoundation

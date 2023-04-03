@@ -2,8 +2,6 @@
 //  ScrumdingerUITests.swift
 //  ScrumdingerUITests
 //
-//  Created by Kristina Belova on 21.03.2023.
-//
 
 import XCTest
 

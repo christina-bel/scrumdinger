@@ -2,8 +2,6 @@
 //  CardView.swift
 //  Scrumdinger
 //
-//  Created by Kristina Belova on 22.03.2023.
-//
 
 import SwiftUI
 

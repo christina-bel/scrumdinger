@@ -2,8 +2,6 @@
 //  MeetingFooterView.swift
 //  Scrumdinger
 //
-//  Created by Kristina Belova on 24.03.2023.
-//
 
 import SwiftUI
 

@@ -2,8 +2,6 @@
 //  DetailView.swift
 //  Scrumdinger
 //
-//  Created by Kristina Belova on 23.03.2023.
-//
 
 import SwiftUI
 
